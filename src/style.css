@@ -1,0 +1,74 @@
+:root {
+  /* Premium Color Palette (Terang) */
+  --bg-primary: #F4EEEB;
+  /* Isabelline */
+  --bg-secondary: #EDE3D6;
+  /* Southern Sand */
+  --text-primary: #292E1E;
+  /* Pine Tree */
+  --text-secondary: #7A6B5E;
+  /* Vintage Coin */
+  --accent: #B3A696;
+  /* Taupe */
+  --border-color: #EDE3D6;
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  /* Premium Color Palette (Gelap) */
+  --bg-primary: #292E1E;
+  /* Pine Tree */
+  --bg-secondary: #1a1e13;
+  /* Pine Tree lebih gelap sedikit */
+  --text-primary: #F4EEEB;
+  /* Isabelline */
+  --text-secondary: #EDE3D6;
+  /* Southern Sand */
+  --accent: #B3A696;
+  /* Taupe */
+  --border-color: #7A6B5E;
+  /* Vintage Coin */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Base Animations */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
