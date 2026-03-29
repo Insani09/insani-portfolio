@@ -1,7 +1,8 @@
 export const printCV = (e) => {
     e?.preventDefault()
 
-    const fileURL = '/CV INSANI AURA R.pdf'
+    // Menambahkan query cache buster agar selalu memuat file PDF terbaru
+    const fileURL = `/CV INSANI AURA R.pdf?t=${new Date().getTime()}`
 
     // Mencoba menggunakan trik iframe tersembunyi untuk auto-print
     const iframe = document.createElement('iframe')

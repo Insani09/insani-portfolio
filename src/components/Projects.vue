@@ -3,7 +3,7 @@ import { ref, computed } from 'vue'
 import { FolderGit2, Github } from 'lucide-vue-next'
 import dashboardPjblImg from '../assets/Dashboard-pjbl.png'
 import lngshootImg from '../assets/Lngshoot-Web.png'
-import bakulImg from '../assets/bakul-web-design.jpeg'
+import bakulImg from '../assets/bakul-web-design.jpg'
 import noteImg from '../assets/note-web.png'
 
 const activeFilter = ref('Semua')
@@ -13,7 +13,8 @@ const projects = ref([
     id: 1,
     title: 'Website Manajemen UMKM',
     description: 'Sistem informasi dengan Admin Dashboard dan fitur CRUD terintegrasi untuk operasional UMKM secara efisien.',
-    tech: ['PHP Native', 'MySQL'],
+    tech: ['HTML', 'Tailwind CSS', 'PHP Native', 'MySQL', 'phpMyAdmin', 'Git & GitHub'],
+    link: 'https://github.com/HablSank/Candy-Vet.git',
     category: 'Favorit',
     image: dashboardPjblImg
   },
@@ -21,7 +22,7 @@ const projects = ref([
     id: 2,
     title: 'Aplikasi Keuangan "Bakul"',
     description: 'Aplikasi pelacak keuangan harian yang dikembangkan di Coding Camp, membantu mengorganisir pemasukan dan pengeluaran.',
-    tech: ['JavaScript'],
+    tech: ['React', 'Express.js', 'RESTful API', 'MySQL', 'Git & GitHub'],
     category: 'Terbaru',
     image: bakulImg
   },
@@ -29,15 +30,17 @@ const projects = ref([
     id: 3,
     title: 'Personal Notes App',
     description: 'Aplikasi pencatatan pribadi yang interaktif dengan antarmuka modern yang nyaman digunakan sehari-hari.',
-    tech: ['React'],
+    tech: ['React', 'CSS Native'],
+    link: 'https://github.com/Insani09/personal-notes-app.git',
     category: 'Terbaru',
     image: noteImg
   },
   {
     id: 4,
-    title: 'Web Fanbase "Lngshoot"',
+    title: 'Web Fanbase "Lngshot"',
     description: 'Website dedikasi untuk grup K-Pop dengan desain UI/UX yang estetik, animasi halus, dan responsif.',
-    tech: ['Vue.js'],
+    tech: ['Vue.js', 'CSS Native'],
+    link: 'https://github.com/Insani09/LNGSHOT4SHO.git',
     category: 'Favorit',
     image: lngshootImg
   }
@@ -99,6 +102,12 @@ const filteredProjects = computed(() => {
               <span v-for="(tech, index) in project.tech" :key="index" class="tech-tag">
                 {{ tech }}
               </span>
+            </div>
+
+            <div v-if="project.link" class="project-links">
+              <a :href="project.link" target="_blank" class="repo-link">
+                <Github :size="16" /> Code Source
+              </a>
             </div>
           </div>
         </div>
@@ -305,6 +314,7 @@ const filteredProjects = computed(() => {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-bottom: 20px;
 }
 
 .tech-tag {
@@ -315,6 +325,32 @@ const filteredProjects = computed(() => {
   border-radius: 6px;
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+.project-links {
+  margin-top: auto;
+  display: flex;
+}
+
+.repo-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  background-color: var(--bg-secondary);
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s;
+}
+
+.repo-link:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 640px) {

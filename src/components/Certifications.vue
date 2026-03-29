@@ -1,15 +1,24 @@
 <script setup>
 import { ref } from 'vue'
 
+import imgBackend from '../assets/sertif-backend-js-pemula.jpeg'
+import imgReact from '../assets/sertif-membuat-aplikasi-web-react.jpeg'
+import imgFrontend from '../assets/sertif-frontend-js-pemula.jpeg'
+import imgDasarJs from '../assets/sertif-belajar-dasar-js.jpeg'
+import imgDasarWeb from '../assets/sertif-belajar-dasar-web.jpeg'
+import imgAws from '../assets/sertif-dasar-cloud-gen-ai.jpeg'
+import imgLogika from '../assets/sertif-pengenalan-logika.jpeg'
+import imgDasarOop from '../assets/sertif-memulai-dasar-pemograman.jpeg'
+
 const certificates = ref([
-  { id: 1, title: 'Belajar Back-End Pemula dengan JavaScript', date: '16 Maret 2026', file: '/Belajar Back-End Pemula dengan JavaScript.pdf', image: '/src/assets/sertif-backend-js-pemula.jpeg' },
-  { id: 2, title: 'Belajar Membuat Aplikasi Web dengan React', date: '02 Maret 2026', file: '/Belajar Membuat Aplikasi Web Dengan React.pdf', image: '/src/assets/sertif-membuat-aplikasi-web-react.jpeg' },
-  { id: 3, title: 'Belajar Membuat Front-End Web untuk Pemula', date: '20 Februari 2026', file: '/Belajar Membuat Front-End Web untuk Pemula.pdf', image: '/src/assets/sertif-frontend-js-pemula.jpeg' },
-  { id: 4, title: 'Belajar Dasar Pemrograman JavaScript', date: '08 Februari 2026', file: '/Belajar Dasar Pemograman Javascript.pdf', image: '/src/assets/sertif-belajar-dasar-js.jpeg' },
-  { id: 5, title: 'Belajar Dasar Pemrograman Web', date: '26 Januari 2026', file: '/Belajar Dasar Pemrograman Web.pdf', image: '/src/assets/sertif-belajar-dasar-web.jpeg' },
-  { id: 6, title: 'Belajar Dasar Cloud dan Gen AI di AWS', date: '17 Januari 2026', file: '/Belajar Dasar Cloud dan Gen AI di AWS.pdf', image: '/src/assets/sertif-dasar-cloud-gen-ai.jpeg' },
-  { id: 7, title: 'Pengenalan ke Logika Pemrograman (Logic 101)', date: '11 Januari 2026', file: '/Pengenalan ke Logika Pemrograman (Programming Logic 101).pdf', image: '/src/assets/sertif-pengenalan-logika.jpeg' },
-  { id: 8, title: 'Dasar Pemrograman untuk Pengembang Software', date: '11 Januari 2026', file: '/Memulai Dasar Pemrograman untuk Menjadi Pengembang.pdf', image: '/src/assets/sertif-memulai-dasar-pemograman.jpeg' }
+  { id: 1, title: 'Belajar Back-End Pemula dengan JavaScript', date: '16 Maret 2026', file: '/Belajar Back-End Pemula dengan JavaScript.pdf', image: imgBackend },
+  { id: 2, title: 'Belajar Membuat Aplikasi Web dengan React', date: '02 Maret 2026', file: '/Belajar Membuat Aplikasi Web Dengan React.pdf', image: imgReact },
+  { id: 3, title: 'Belajar Membuat Front-End Web untuk Pemula', date: '20 Februari 2026', file: '/Belajar Membuat Front-End Web untuk Pemula.pdf', image: imgFrontend },
+  { id: 4, title: 'Belajar Dasar Pemrograman JavaScript', date: '08 Februari 2026', file: '/Belajar Dasar Pemograman Javascript.pdf', image: imgDasarJs },
+  { id: 5, title: 'Belajar Dasar Pemrograman Web', date: '26 Januari 2026', file: '/Belajar Dasar Pemrograman Web.pdf', image: imgDasarWeb },
+  { id: 6, title: 'Belajar Dasar Cloud dan Gen AI di AWS', date: '17 Januari 2026', file: '/Belajar Dasar Cloud dan Gen AI di AWS.pdf', image: imgAws },
+  { id: 7, title: 'Pengenalan ke Logika Pemrograman (Logic 101)', date: '11 Januari 2026', file: '/Pengenalan ke Logika Pemrograman (Programming Logic 101).pdf', image: imgLogika },
+  { id: 8, title: 'Dasar Pemrograman untuk Pengembang Software', date: '11 Januari 2026', file: '/Memulai Dasar Pemrograman untuk Menjadi Pengembang.pdf', image: imgDasarOop }
 ])
 </script>
 
